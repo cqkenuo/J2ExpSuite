@@ -1,5 +1,5 @@
 # J2ExpSuite
-这是一个以python3编写的的漏洞检测框架，可自定义，添加poc，exp，定向检测，初衷是为了什么呢？我想搞一个全面一点的漏洞检测框架，输入一个url，在选择检测漏洞类型，直接出结果，还要满足POC可集成，简单编写就能加载进去。于是我花了一天的时间搞出了这个框架，初步的满足了我的想法，可自定义poc，指定参数进行漏洞检测。（开开心心）
+这是一个以python3编写的的漏洞检测框架，可自定义，添加poc，exp，定向检测，初衷是为了什么呢？我想搞一个全面一点的漏洞检测框架，输入一个url，在选择检测漏洞类型，直接出结果，还要满足POC可集成，简单编写就能加载进去。主要是为了快速的检测漏洞高的存在，POC主要类型为RCE，读文件，注入漏洞，文件上传等类型漏洞，主要为了撕口子。于是我花了一天的时间搞出了这个框架，初步的满足了我的想法，可自定义poc，指定参数进行漏洞检测。（开开心心）
 
 于是开始着手编写POC，发现好多啊，跟我之前做的都是无用功，无奈跟以前的poc不兼容，再写就还是造轮子，我尝试写了一部分，但是感觉写POC写的越多，这个工具就越来越不属于我，都是再用别人的POC，自己写吧，好多，好多啊！！！@#￥%……
 
@@ -35,6 +35,22 @@ Phpstudy | Phpstudy后门漏洞 | 2020年06月11日
   ~|Spring_CVE_2020_5405|2020年06月12日
   ~|Spring_CVE_2019_3799|2020年06月12日
   ~|Spring_CVE_2018_1273|2020年06月12日
+  ThinkPhp|ThinkPHP_SQLi_XFF_POC|2020年06月15日
+  ~|ThinkPHP_Input_RCE_POC|2020年06月15日
+  ~|ThinkPHP_PAY_SQLI_POC|2020年06月15日
+  ~|ThinkPHP_Multi_SQL_LEAK_POC|2020年06月15日
+  ~|ThinkPHP_Method_Filter_Code_Exec|2020年06月15日
+  ~|ThinkPHP_Lite_Code_Exec_POC|2020年06月15日
+  ~|ThinkPHP_Index_Showid_RCE_POC|2020年06月15日
+  ~|ThinkPHP_Invoke_Func_Code_Exec|2020年06月15日
+  ~|ThinkPHP_Index_Contruct_RCE|2020年06月15日
+  ~|ThinkPHP_Driver_Display_RCE|2020年06月15日
+  ~|ThinkPHP_Debug_Index_IDS_Sqli|2020年06月15日
+  ~|ThinkPHP_Construct_Debug_RCE|2020年06月15日
+  ~|ThinkPHP_Construct_Code_Exec_Verify|2020年06月15日
+  ~|ThinkPHP_Checkcode_Time_Sqli|2020年06月15日
+  别着急|正在写|持续更新
+  要不然|大家|一起来~
 
 
     
@@ -57,7 +73,7 @@ def XXX_POC(Url): #必须与脚本名称相同
       urldata = scheme + "://" + url + ':' + str(port) + '/login.action'
       if "漏洞判断成功条件":
     #------------POC部分，按需更改--------------
-          print(Vcolors.RED +"[!] 存在【漏洞名称】漏洞\r版本号:什么漏洞\r" + Vcolors.ENDC)
+          print(Vcolors.RED +"[!] 存在【漏洞名称】漏洞->版本号:什么漏洞\r" + Vcolors.ENDC)
     except:
         logging.error("【脚本名称】脚本出现异常")
         
@@ -76,3 +92,6 @@ def XXX_POC(Url): #必须与脚本名称相同
 项目地址：https://github.com/JE2Se/J2ExpSuite
 
 我还想白嫖几个star，说不定哪天我更新POC呢~
+
+## 项目愿景
+后期会加入到指纹识别
